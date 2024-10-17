@@ -5,86 +5,68 @@ const svg = d3.select("#visualization")
     .attr("width", width)
     .attr("height", height);
 
-// Function to draw a triangle
-function drawTriangle(x, y, side) {
-    const points = [
-        [x, y],
-        [x + side, y],
-        [x, y + side]
-    ];
-    svg.append("polygon")
-        .attr("class", "triangle")
-        .attr("points", points.map(p => p.join(",")).join(" "));
+const points = {
+    A: [400, 200],
+    B: [250, 350],
+    C: [550, 350],
+    D: [250, 550],
+    E: [550, 550],
+    F: [100, 450],
+    G: [100, 150],
+    H: [600, 50],
+    K: [750, 250],
+    L: [400, 550]
+};
+
+svg.append("polygon")
+    .attr("class", "triangle")
+    .attr("points", [points.A, points.B, points.C].map(p => p.join(",")).join(" "));
+
+// Function to draw a line between two points
+function drawLine(p1, p2) {
+    svg.append("line")
+        .attr("class", "line")
+        .attr("x1", p1[0])
+        .attr("y1", p1[1])
+        .attr("x2", p2[0])
+        .attr("y2", p2[1]);
 }
 
-// Function to draw a square
-function drawSquare(x, y, side) {
-    svg.append("rect")
-        .attr("class", "square")
-        .attr("x", x)
-        .attr("y", y)
-        .attr("width", side)
-        .attr("height", side);
+// Draw the squares
+drawLine(points.A, points.F);
+drawLine(points.F, points.G);
+drawLine(points.G, points.B);
+
+drawLine(points.B, points.D);
+drawLine(points.D, points.E);
+drawLine(points.E, points.C);
+
+drawLine(points.C, points.H);
+drawLine(points.H, points.K);
+drawLine(points.K, points.A);
+
+drawLine(points.A, points.L);
+drawLine(points.A, points.F);
+drawLine(points.B, points.G);
+// ... (draw the rest of the lines)
+
+// Function to draw a point
+function drawPoint(p, label, radius = 3, ) {
+    const offset = 10; // Adjust this value to control label position
+    svg.append("text")
+        .attr("class", "text")
+        .attr("x", p[0] + offset)
+        .attr("y", p[1] - offset)
+        .text(label);
+
+    svg.append("circle")
+        .attr("class", "point")
+        .attr("cx", p[0])
+        .attr("cy", p[1])
+        .attr("r", radius);
 }
 
-// Initial triangle side lengths
-let a = 150;
-let b = 200;
-
-// Function to update the visualization
-function updateVisualization() {
-    svg.selectAll("*").remove(); // Clear previous elements
-
-    const c = Math.sqrt(a * a + b * b);
-
-    // Draw triangles
-    drawTriangle(50, 50, a);
-    drawTriangle(50 + a, 50, b);
-    drawTriangle(50, 50 + a, c);
-
-    // Draw squares
-    drawSquare(50, 50 + a, c);
-    drawSquare(50 + a, 50, b);
-    drawSquare(50, 50, a);
-
-    // Add labels (a, b, c)
-    svg.append("text")
-        .attr("class", "text")
-        .attr("x", 50 + a / 2)
-        .attr("y", 50 + 20)
-        .text("a");
-    svg.append("text")
-        .attr("class", "text")
-        .attr("x", 50 + a + b / 2)
-        .attr("y", 50 + 20)
-        .text("b");
-    svg.append("text")
-        .attr("class", "text")
-        .attr("x", 50 + 20)
-        .attr("y", 50 + a + c / 2)
-        .text("c");
+// Draw all the points using a loop
+for (const point in points) {
+    drawPoint(points[point], point);
 }
-
-// Initial visualization
-updateVisualization();
-
-// Add interactive sliders for 'a' and 'b'
-d3.select("#visualization").append("input")
-    .attr("type", "range")
-    .attr("min", 50)
-    .attr("max", 300)
-    .attr("value", a)
-    .on("input", function() {
-        a = +this.value;
-        updateVisualization();
-    });
-
-d3.select("#visualization").append("input")
-    .attr("type", "range")
-    .attr("min", 50)
-    .attr("max", 300)
-    .attr("value", b)
-    .on("input", function() {
-        b = +this.value;
-        updateVisualization();
-    });

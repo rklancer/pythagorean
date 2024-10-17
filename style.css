@@ -7,17 +7,25 @@
 
 .triangle {
     fill: lightblue;
+    /* Fill for the main triangle */
     stroke: black;
+    /* Border color for the triangle */
 }
 
-.square {
-    fill: orange;
-    opacity: 0.7;
+.line {
     stroke: black;
+    /* Color of the lines */
+}
+
+.point {
+    fill: black;
+    /* Color of the points */
+    stroke: none;
+    /* No border around the points */
 }
 
 .text {
     font-family: sans-serif;
     font-size: 14px;
-    text-anchor: middle;
+    /* Add other styles as needed */
 }
