@@ -33,21 +33,25 @@ function drawLine(p1, p2) {
 }
 
 // Draw the squares
-drawLine(points.A, points.F);
-drawLine(points.F, points.G);
-drawLine(points.G, points.B);
+drawLine(points.A, points.G);
+drawLine(points.G, points.F);
+drawLine(points.F, points.B);
 
 drawLine(points.B, points.D);
 drawLine(points.D, points.E);
 drawLine(points.E, points.C);
 
-drawLine(points.C, points.H);
-drawLine(points.H, points.K);
-drawLine(points.K, points.A);
+drawLine(points.C, points.K);
+drawLine(points.K, points.H);
+drawLine(points.H, points.A);
 
 drawLine(points.A, points.L);
-drawLine(points.A, points.F);
-drawLine(points.B, points.G);
+drawLine(points.A, points.D);
+drawLine(points.A, points.E);
+
+drawLine(points.C, points.F);
+drawLine(points.B, points.K);
+
 // ... (draw the rest of the lines)
 
 // Function to draw a point
