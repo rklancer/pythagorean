@@ -45,17 +45,15 @@ drawLine(points.C, points.K);
 drawLine(points.K, points.H);
 drawLine(points.H, points.A);
 
-drawLine(points.A, points.L);
-drawLine(points.A, points.D);
-drawLine(points.A, points.E);
-
-drawLine(points.C, points.F);
-drawLine(points.B, points.K);
-
-// ... (draw the rest of the lines)
+// Draw the altitude and remaining lines
+drawLine(points.A, points.L); 
+drawLine(points.A, points.D); 
+drawLine(points.A, points.E); 
+drawLine(points.C, points.F); 
+drawLine(points.B, points.K); 
 
 // Function to draw a point
-function drawPoint(p, label, radius = 3, ) {
+function drawPoint(p, label, radius = 3) {
     const offset = 10; // Adjust this value to control label position
     svg.append("text")
         .attr("class", "text")
