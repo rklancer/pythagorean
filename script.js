@@ -1,10 +1,3 @@
-// Euclid's proof of the Pythagorean theorem
-// Something like https://www.geogebra.org/m/apubVUSe crossed with
-// http://aleph0.clarku.edu/~djoyce/elements/bookI/propI47.html
-// which has the translated text of the proof and cross-references the original propositions.
-// So far the most intersesting part is that this was coded mostly by prompting Gemini Pro. 
-// Conversation (to date): https://g.co/gemini/share/1890507f58a0
-
 const width = 800;
 const height = 600;
 const svg = d3.select("#visualization")
