@@ -177,6 +177,51 @@ function redraw() {
     }
 }
 
-// ... (rest of your code)
 // Initial drawing
 redraw();
+// Add the HTML proof text
+const proofTextDiv = document.getElementById("proof-text");
+proofTextDiv.innerHTML = `
+  <p><b>Proposition 47.</b> In right-angled triangles the square on the side subtending the right angle is equal to the squares on the sides containing the right angle.</p>
+
+  <p>Let <i>ABC</i> be a right-angled triangle having the angle <i>BAC</i> right.</p>
+
+  <p>I say that the square on <i>BC</i> is equal to the squares on <i>BA</i> and <i>AC</i>.</p>
+
+  <p>Describe the square <i><span class="highlight-element" data-highlight="BDEC">BDEC</span></i> on <i>BC</i>, and the squares <i>GB</i> and <i>HC</i> on <i>BA</i> and <i>AC</i>. Draw <i>AL</i> through <i>A</i> parallel to either <i>BD</i> or <i>CE</i>, and join <i>AD</i> and <i>FC</i>.</p>
+
+  <p>Since each of the angles <i>BAC</i> and <i>BAG</i> is right, it follows that with a straight line <i>BA</i>, and at the point <i>A</i> on it, the two straight lines <i>AC</i> and <i>AG</i> not lying on the same side make the adjacent angles equal to two right angles, therefore <i>CA</i> is in a straight line with <i>AG</i>.</p>
+
+  <p>For the same reason <i>BA</i> is also in a straight line with <i>AH</i>.</p>
+
+  <p>Since the angle <i>DBC</i> is equal to the angle <i>FBA</i>, for each is right, add the angle <i>ABC</i> to each, therefore the whole angle <i>DBA</i> is equal to the whole angle <i>FBC</i>.</p>
+
+  <p>Since <i>DB</i> is equal to <i>BC</i>, and <i>FB</i> to <i>BA</i>, the two sides <i>AB</i> and <i>BD</i> are equal to the two sides <i>FB</i> and <i>BC</i> respectively, and the angle <i>ABD</i> is equal to the angle <i>FBC</i>, therefore the base <i>AD</i> is equal to the base <i>FC</i>, and the triangle <i>ABD</i> is equal to the triangle <i>FBC</i>.</p>
+
+  <p>Now the parallelogram <i>BL</i> is double the triangle <i>ABD</i>, for they have the same base <i>BD</i> and are in the same parallels <i>BD</i> and <i>AL</i>. And the square <i>GB</i> is double the triangle <i>FBC</i>, for they again have the same base <i>FB</i> and are in the same parallels <i>FB</i> and <i>GC</i>. [Proposition 41] But the doubles of equals are equal to one another, therefore the parallelogram <i>BL</i> is also equal to the square <i>GB</i>.</p>
+
+  <p>Similarly, if <i>AE</i> and <i>BK</i> are joined, the parallelogram <i>CL</i> can also be proved equal to the square <i>HC</i>; therefore the whole square <i>BDEC</i> is equal to the two squares <i>GB</i> and <i>HC</i>. [Common notion 2] And the square <i>BDEC</i> is described on <i>BC</i>, and the squares <i>GB</i> and <i>HC</i> on <i>BA</i> and <i>AC</i>. Therefore the square on the side <i>BC</i> is equal to the squares on the sides <i>BA</i> and <i>AC</i>.</p>
+
+  <p>Therefore in right-angled triangles the square on the side subtending the right angle is equal to the squares on the sides containing the right angle. Q.E.D.</p>
+`;
+
+
+// Add event listeners for hover/click interactions
+d3.selectAll(".highlight-element").on("mouseover", highlightElement);
+d3.selectAll(".highlight-element").on("mouseout", unhighlightElement);
+
+// Function to highlight the corresponding element
+function highlightElement() {
+  const elementToHighlight = d3.select(this).attr("data-highlight");
+  // Add logic here to highlight the element in the SVG
+  // For example, you can change the fill color or stroke width
+  // of the corresponding shape in the SVG.
+  console.log("Highlight:", elementToHighlight); // Placeholder for now
+}
+
+// Function to unhighlight the element
+function unhighlightElement() {
+  const elementToUnhighlight = d3.select(this).attr("data-highlight");
+  // Add logic here to unhighlight the element in the SVG
+  console.log("Unhighlight:", elementToUnhighlight); // Placeholder for now
+}
