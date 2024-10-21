@@ -1,0 +1,44 @@
+This is a design note.
+
+The text in the square brackets below should be made clickable.
+
+The action that should happen after clicking each section of square bracket is described in parentheses.
+
+The text in parentheses should not be included in the final text.
+
+The text is enclosed in <text> and </text> tags below. The <text> tags should not be included in the final text.
+
+<text>
+In right-angled triangles the square on the side opposite the right angle equals the sum of the squares on the sides containing the right angle.
+
+Let [ABC be a right-angled triangle having the angle BAC right].
+
+(ABC be...: Triangle ABC and a right angle symbol on angle BAC should highlight while this is hovered. If it is clicked, the highlight remains.)
+
+I say that [the square on BC] equals the [sum of the squares on BA and AC].
+
+(The square on BC...: The area of the square on BC should fill in while this is hovered. If it is clicked, the fill remains.)
+(sum of the squares...: The area of squares BA and AC should fill in while this is hovered. If it is clicked, the fill remains.)
+
+Describe the square BDEC on BC, and the squares GB and HC on BA and AC. Draw AL through A parallel to either BD or CE, and join AD and FC.
+
+Since each of the angles BAC and BAG is right, it follows that with a straight line BA, and at the point A on it, the two straight lines AC and AG not lying on the same side make the adjacent angles equal to two right angles, therefore CA is in a straight line with AG.
+
+For the same reason BA is also in a straight line with AH.
+
+Since the angle DBC equals the angle FBA, for each is right, add the angle ABC to each, therefore the whole angle DBA equals the whole angle FBC.
+
+Since DB equals BC, and FB equals BA, the two sides AB and BD equal the two sides FB and BC respectively, and the angle ABD equals the angle FBC, therefore the base AD equals the base FC, and the triangle ABD equals the triangle FBC.
+
+Now the parallelogram BL is double the triangle ABD, for they have the same base BD and are in the same parallels BD and AL. And the square GB is double the triangle FBC, for they again have the same base FB and are in the same parallels FB and GC.
+
+Therefore the parallelogram BL also equals the square GB.
+
+Similarly, if AE and BK are joined, the parallelogram CL can also be proved equal to the square HC. Therefore the whole square BDEC equals the sum of the two squares GB and HC.
+
+And the square BDEC is described on BC, and the squares GB and HC on BA and AC.
+
+Therefore the square on BC equals the sum of the squares on BA and AC.
+
+Therefore in right-angled triangles the square on the side opposite the right angle equals the sum of the squares on the sides containing the right angle.
+</text>
