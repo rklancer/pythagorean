@@ -183,51 +183,32 @@ redraw();
 // Add the HTML proof text
 const proofTextDiv = document.getElementById("proof-text");
 proofTextDiv.innerHTML = `
-<div class="theorem">
-<h1>Proposition 47</h1>
-
-<div class="statement">In right-angled triangles the square on the side opposite the right angle equals the sum of the squares on the sides containing the right angle.</div>
+<div class="text">
+<p>In right-angled triangles the square on the side opposite the right angle equals the sum of the squares on the sides containing the right angle.</p>
 
 <p>Let <i>ABC</i> be a right-angled triangle having the angle <i>BAC</i> right.
 </p><p>I say that the square on <i>BC</i> equals the sum of the squares on <i>BA</i> and <i>AC.</i>
 
-</p><div class="just"><a href="propI46.html">I.46</a>
-<br><a href="propI31.html">I.31</a>, <a href="post1.html">I.Post.1</a></div>
-<p>Describe the square <i>BDEC</i> on <i>BC,</i> and the squares <i>GB</i> and <i>HC</i> on <i>BA</i> and <i>AC.</i>  Draw <i>AL</i> through <i>A</i> parallel to either <i>BD</i> or <i>CE,</i> and join <i>AD</i> and <i>FC.</i>
+</p><p>Describe the square <i>BDEC</i> on <i>BC,</i> and the squares <i>GB</i> and <i>HC</i> on <i>BA</i> and <i>AC.</i>  Draw <i>AL</i> through <i>A</i> parallel to either <i>BD</i> or <i>CE,</i> and join <i>AD</i> and <i>FC.</i>
 
-</p><div class="ldiagram">
-<img src="propI47.gif" hspace="10" vspace="10" alt="I.47">
-</div>
-
-<div class="just"><a href="defI22.html">I.Def.22</a>
-<br><a href="propI14.html">I.14</a></div>
-<p>Since each of the angles <i>BAC</i> and <i>BAG</i> is right, it follows that with a straight line <i>BA,</i> and at the point <i>A</i> on it, the two straight lines <i>AC</i> and <i>AG</i> not lying on the same side make the adjacent angles equal to two right angles, therefore <i>CA</i> is in a straight line with <i>AG.</i>
+</p><p>Since each of the angles <i>BAC</i> and <i>BAG</i> is right, it follows that with a straight line <i>BA,</i> and at the point <i>A</i> on it, the two straight lines <i>AC</i> and <i>AG</i> not lying on the same side make the adjacent angles equal to two right angles, therefore <i>CA</i> is in a straight line with <i>AG.</i>
 
 </p><p>For the same reason <i>BA</i> is also in a straight line with <i>AH.</i>
 
-</p><div class="just"><a href="defI22.html">I.Def.22</a>
-<br><a href="post4.html">I.Post.4</a>
-<br><a href="cn.html">C.N.2</a></div>
-<p>Since the angle <i>DBC</i> equals the angle <i>FBA,</i> for each is right, add the angle <i>ABC</i>  to each, therefore the whole angle <i>DBA</i> equals the whole angle <i>FBC.</i>
+</p><p>Since the angle <i>DBC</i> equals the angle <i>FBA,</i> for each is right, add the angle <i>ABC</i>  to each, therefore the whole angle <i>DBA</i> equals the whole angle <i>FBC.</i>
 
-</p><div class="just"><a href="defI22.html">I.Def.22</a>
-<br><a href="propI4.html">I.4</a></div>
-<p>Since <i>DB</i> equals <i>BC,</i> and <i>FB</i> equals <i>BA,</i> the two sides <i>AB</i> and <i>BD</i> equal the two sides <i>FB</i> and <i>BC</i> respectively, and the angle <i>ABD</i> equals the angle <i>FBC,</i> therefore the base <i>AD</i> equals the base <i>FC,</i> and the triangle <i>ABD</i> equals the triangle <i>FBC.</i>
+</p><p>Since <i>DB</i> equals <i>BC,</i> and <i>FB</i> equals <i>BA,</i> the two sides <i>AB</i> and <i>BD</i> equal the two sides <i>FB</i> and <i>BC</i> respectively, and the angle <i>ABD</i> equals the angle <i>FBC,</i> therefore the base <i>AD</i> equals the base <i>FC,</i> and the triangle <i>ABD</i> equals the triangle <i>FBC.</i>
 
 </p><p>Now the parallelogram <i>BL</i> is double the triangle <i>ABD,</i> for they have the same base <i>BD</i> and are in the same parallels <i>BD</i> and <i>AL.</i>  And the square <i>GB</i> is double the triangle <i>FBC,</i> for they again have the same base <i>FB</i> and are in the same parallels <i>FB</i> and <i>GC.</i>
-</p><div class="just"><a href="propI41.html">I.41</a></div>
 
-<p>Therefore the parallelogram <i>BL</i> also equals the square <i>GB.</i>
+</p><p>Therefore the parallelogram <i>BL</i> also equals the square <i>GB.</i>
 
 </p><p>Similarly, if <i>AE</i> and <i>BK</i> are joined, the parallelogram <i>CL</i> can also be proved equal to the square <i>HC.</i>  Therefore the whole square <i>BDEC</i> equals the sum of the two squares <i>GB</i> and <i>HC.</i>
-</p><div class="just"><a href="cn.html">C.N.2</a></div>
 
-<p>And the square <i>BDEC</i> is described on <i>BC,</i> and the squares <i>GB</i> and <i>HC</i> on <i>BA</i> and <i>AC.</i>
+</p><p>And the square <i>BDEC</i> is described on <i>BC,</i> and the squares <i>GB</i> and <i>HC</i> on <i>BA</i> and <i>AC.</i>
 </p><p>Therefore the square on <i>BC</i> equals the sum of the squares on <i>BA</i> and <i>AC.</i>
 
-</p><p>Therefore <i>in right-angled triangles the square on the side opposite the right angle equals the sum of the squares on the sides containing the right angle..</i>
-
-</p><div class="qed">Q.E.D.</div>
+</p><p>Therefore <i>in right-angled triangles the square on the side opposite the right angle equals the sum of the squares on the sides containing the right angle.</i></p>
 </div>
 `;
 
