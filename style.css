@@ -24,8 +24,13 @@
     /* No border around the points */
 }
 
-.text {
+.label {
     font-family: sans-serif;
     font-size: 14px;
     /* Add other styles as needed */
+}
+
+.text {
+    font-family: sans-serif;
+    font-size: 14px;
 }
